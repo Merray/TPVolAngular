@@ -1,6 +1,18 @@
-<li><a href="" [routerLink]="['/home']" routerLinkActive="active">Retour au menu</a></li>
 <h1>liste des client</h1>
 <table class=" table">
+  <tr>
+    <th>Id</th>
+    <th>Nom</th>
+    <th>Numéro de téléphone</th>
+    <th>numéro de Fax</th>
+    <th>Email</th>
+    <th></th>
+    <th></th>
+    <th></th>
+
+
+
+  </tr>
   <tr *ngFor="let client of clients">
     <td>{{client.id_client}}</td>
     <td>{{client.nom}}</td>
