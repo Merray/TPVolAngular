@@ -6,20 +6,20 @@
     </div>
     <div class="form-group">
       <label for="datedepart">date de départ :</label>
-      <input id="datedepart" name="datedepart" class="form-control" required [(ngModel)]="vol.datedepart" #nom="ngModel"/>
+      <input id="datedepart" name="datedepart" class="form-control" required  type="date" [(ngModel)]="vol.datedepart" #nom="ngModel"/>
       <!--<div *ngIf="datedepart.dirty&&datedepart.hasError('required')">Date de départ obligatoire</div>-->
     </div>
     <div class="form-group">
       <label for="datearrivee">date d'arrivée :</label>
-      <input class="form-control" id="datearrivee" name="datearrivee" required [(ngModel)]="vol.datearrivee"/>
+      <input class="form-control" id="datearrivee" name="datearrivee" type="date" required [(ngModel)]="vol.datearrivee"/>
     </div>
     <div class="form-group">
       <label for="heuredepart">Heure de départ :</label>
-      <input class="form-control" id="heuredepart" name="heuredepart" required [(ngModel)]="vol.heuredepart"/>
+      <input class="form-control" id="heuredepart" name="heuredepart" required type="time" [(ngModel)]="vol.heuredepart"/>
     </div>
     <div class="form-group">
       <label for="heurearrivee">Heure d'arrivée :</label>
-      <input class="form-control" id="heurearrivee" name="heurearrivee" required [(ngModel)]="vol.heurearrivee"/>
+      <input class="form-control" id="heurearrivee" name="heurearrivee" required type="time" [(ngModel)]="vol.heurearrivee"/>
     </div>
 
     <div class="form-group">
@@ -30,6 +30,6 @@
       <label for="aeroportarrivee">Aeroport d'arrivée :</label>
       <input class="form-control" id="aeroportarrivee" name="aeroportarrivee" required [(ngModel)]="vol.aeroportarrivee"/>
     </div>
-    <button type="submit" [disabled]="form.invalid" class="btn btn-success">save</button>
+    <button type="submit" class="btn btn-success">save</button>
   </form>
 </div>
