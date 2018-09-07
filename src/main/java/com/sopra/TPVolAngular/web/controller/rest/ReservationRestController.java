@@ -26,7 +26,7 @@ import com.sopra.TPVolAngular.model.Reservation;
 import com.sopra.TPVolAngular.model.view.JsonViews;
 import com.sopra.TPVolAngular.repositories.ReservationRepository;
 
-@CrossOrigin("{*}")
+@CrossOrigin(origins= {"*"})
 @RestController
 @RequestMapping("/rest/reservation")
 public class ReservationRestController {

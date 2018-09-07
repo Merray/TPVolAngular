@@ -11,9 +11,9 @@
     <td>{{r.id}}</td>
     <td>{{r.date}}</td>
     <td>{{r.numero}}</td>
-    <td><a href="" class="btn btn-info">Editer</a><td>
-    <td><a href="" class="btn btn-danger">Supprimer</a></td>
+    <td><a href="" [routerLink]="['/reservation', 'edit', r.id]" class="btn btn-info">Editer</a><td>
+    <td><button (click)="delete(r.id)" class="btn btn-danger">Supprimer</button></td>
   </tr>
 </table>
 
-<a href="" class="btn btn-info">Ajouter</a>
+<a href="" [routerLink]="['/reservation', 'create']" class="btn btn-info">Ajouter</a>
