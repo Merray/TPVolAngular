@@ -3,10 +3,9 @@ import {NgModule} from '@angular/core';
 
 import {routes} from './route';
 import {RouterModule} from '@angular/router';
-
+import {PassagerComponent} from './passager/passager.component';
 import {AppComponent} from './app.component';
 import {FormsModule} from '@angular/forms';
-import {PassagerComponent} from './service/passager/passager.component';
 import {ClientComponent} from './client/client.component';
 import {ClientEditComponent} from './client/client-edit.component';
 import {HomeComponent} from './home/home.component';
@@ -16,7 +15,6 @@ import { ReservationEditComponent } from './reservation/reservation/reservation-
 @NgModule({
   declarations: [
     AppComponent,
-    PassagerComponent,
     ReservationComponent,
     ReservationEditComponent,
     ClientComponent,
