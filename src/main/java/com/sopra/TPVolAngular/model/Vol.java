@@ -30,6 +30,7 @@ public class Vol {
 	@SequenceGenerator(name = "seqVol", sequenceName = "seq_vol", initialValue = 100, allocationSize = 1)
 	@GeneratedValue(generator = "seqVol", strategy = GenerationType.SEQUENCE)
 	@Column(name = "id_vol")
+	@JsonView(JsonViews.Common.class)
 	private Long id;
 	@Column(name = "date_depart")
 	@Temporal(TemporalType.DATE)

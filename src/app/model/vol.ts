@@ -2,7 +2,7 @@ import {Time} from '@angular/common';
 
 export class Vol {
   constructor(private _id?: number, private _dateDepart?: Date, private _dateArrivee?: Date, private _heureDepart?: Time,
-              private _heureArrivee?: Time, private _aeroportDepart?: string, private _aeroportArrivee?: string) {
+              private _heureArrivee?: Time, private _depart?: string, private _arrivee?: string) {
   }
 
 
@@ -46,19 +46,19 @@ export class Vol {
     this._heureArrivee = value;
   }
 
-  get aeroportDepart(): string {
-    return this._aeroportDepart;
+  get depart(): string {
+    return this._depart;
   }
 
-  set aeroportDepart(value: string) {
-    this._aeroportDepart = value;
+  set depart(value: string) {
+    this._depart = value;
   }
 
-  get aeroportArrivee(): string {
-    return this._aeroportArrivee;
+  get arrivee(): string {
+    return this._arrivee;
   }
 
-  set aeroportArrivee(value: string) {
-    this._aeroportArrivee = value;
+  set arrivee(value: string) {
+    this._arrivee = value;
   }
 }

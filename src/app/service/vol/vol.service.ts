@@ -24,7 +24,7 @@ export class VolService {
 
   public findById(id: number): Observable<Vol> {
     // @ts-ignore
-    return this.http.get(`${this.url}/rest/vol/${id}`, {headers: this.header});
+    return this.http.get(`${this.url}/rest/vol/${id}`, {headers: this.headers});
   }
 
   public save(vol: Vol): Observable<any> {
@@ -32,7 +32,8 @@ export class VolService {
       return this.http.put(`${this.url}/rest/vol/`, vol, {headers: this.headers});
     } else {
       const o = {
-        id: vol.id, dateDepart: vol.dateDepart, dateArrivee: vol.dateArrivee, heureDepart: vol.heureDepart, heureArrivee: vol.heureArrivee
+        id: vol.id, dateDepart: vol.dateDepart, dateArrivee: vol.dateArrivee, heureDepart: vol.heureDepart, heureArrivee: vol.heureArrivee,
+        depart: vol.depart, arrivee: vol.arrivee
       };
       console.log(vol);
       return this.http.post(`${this.url}/rest/vol/`, o, {headers: this.headers});
