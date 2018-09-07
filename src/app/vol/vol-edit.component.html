@@ -1,3 +1,35 @@
-<p>
-  vol-edit works!
-</p>
+<div class="container">
+  <form (ngSubmit)="save()" #form="ngForm">
+    <div class="form-group">
+      <label for="id">id :</label>
+      <input id="id" name="id" class="form-control" [(ngModel)]="vol.id" readonly="true"/>
+    </div>
+    <div class="form-group">
+      <label for="datedepart">date de départ :</label>
+      <input id="datedepart" name="datedepart" class="form-control" required [(ngModel)]="vol.datedepart" #nom="ngModel"/>
+      <!--<div *ngIf="datedepart.dirty&&datedepart.hasError('required')">Date de départ obligatoire</div>-->
+    </div>
+    <div class="form-group">
+      <label for="datearrivee">date d'arrivée :</label>
+      <input class="form-control" id="datearrivee" name="datearrivee" required [(ngModel)]="vol.datearrivee"/>
+    </div>
+    <div class="form-group">
+      <label for="heuredepart">Heure de départ :</label>
+      <input class="form-control" id="heuredepart" name="heuredepart" required [(ngModel)]="vol.heuredepart"/>
+    </div>
+    <div class="form-group">
+      <label for="heurearrivee">Heure d'arrivée :</label>
+      <input class="form-control" id="heurearrivee" name="heurearrivee" required [(ngModel)]="vol.heurearrivee"/>
+    </div>
+
+    <div class="form-group">
+      <label for="aeroportdepart">Aeroport de départ :</label>
+      <input class="form-control" id="aeroportdepart" name="aeroportdepart" required [(ngModel)]="vol.aeroportdepart"/>
+    </div>
+    <div class="form-group">
+      <label for="aeroportarrivee">Aeroport d'arrivée :</label>
+      <input class="form-control" id="aeroportarrivee" name="aeroportarrivee" required [(ngModel)]="vol.aeroportarrivee"/>
+    </div>
+    <button type="submit" [disabled]="form.invalid" class="btn btn-success">save</button>
+  </form>
+</div>
