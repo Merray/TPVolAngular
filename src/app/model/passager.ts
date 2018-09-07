@@ -1,4 +1,5 @@
 import {Reservation} from './reservation';
+import {Adresse} from './adresse';
 
 export class Passager {
   constructor(private _idPassager?: number, private _nom?: string, private _prenom?: string, private _reservations?: Reservation[]) {

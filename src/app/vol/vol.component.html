@@ -11,12 +11,12 @@
   </tr>
   <tr *ngFor="let v of vols">
     <td>{{v.id}}</td>
-    <td>{{v.datedepart}}</td>
-    <td>{{v.datearrivee}}</td>
-    <td>{{v.heuredepart}}</td>
-    <td>{{v.heurearrivee}}</td>
-    <td>{{v.aeroportdepart}}</td>
-    <td>{{v.aeroportarrivee}}</td>
+    <td>{{v.dateDepart}}</td>
+    <td>{{v.dateArrivee}}</td>
+    <td>{{v.heureDepart}}</td>
+    <td>{{v.heureArrivee}}</td>
+    <td>{{v.aeroportDepart}}</td>
+    <td>{{v.aeroportArrivee}}</td>
     <td><a href="" [routerLink]="['/vol', 'edit', v.id]" class="btn btn-info">Editer</a><td>
     <td><a href="" class="btn btn-danger" (click)="delete(v.id)">Supprimer</a></td>
   </tr>

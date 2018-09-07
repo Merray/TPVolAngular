@@ -32,8 +32,9 @@ export class VolService {
       return this.http.put(`${this.url}/rest/vol/`, vol, {headers: this.headers});
     } else {
       const o = {
-        id: vol.id, datedepart: vol.datedepart, datearrivee: vol.datearrivee, heuredepart: vol.heuredepart, heurearrivee: vol.heurearrivee
+        id: vol.id, dateDepart: vol.dateDepart, dateArrivee: vol.dateArrivee, heureDepart: vol.heureDepart, heureArrivee: vol.heureArrivee
       };
+      console.log(vol);
       return this.http.post(`${this.url}/rest/vol/`, o, {headers: this.headers});
     }
   }

@@ -7,6 +7,7 @@ import {ReservationEditComponent} from './reservation/reservation-edit.component
 import {ClientEditComponent} from './client/client-edit.component';
 import {VolComponent} from './vol/vol.component';
 import {VolEditComponent} from './vol/vol-edit.component';
+import {PassagerEditComponent} from './passager/passager-edit.component';
 
 export const routes: Routes = [
   {path: 'reservation', component: ReservationComponent},
@@ -14,8 +15,8 @@ export const routes: Routes = [
   {path: 'reservation/edit/:id', component: ReservationEditComponent},
   {path: 'home', component: HomeComponent},
   {path: 'passager', component: PassagerComponent},
-  // {path: 'passager/create', component: PassagerEditComponent},
-  // {path: 'passager/edit/:id', component: PassagerEditComponent},
+  {path: 'passager/create', component: PassagerEditComponent},
+  {path: 'passager/edit/:id', component: PassagerEditComponent},
   {path: 'client', component: ClientComponent},
   {path: 'client/create/el', component: ClientEditComponent},
   {path: 'client/create/moral', component: ClientEditComponent},

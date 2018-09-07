@@ -20,6 +20,7 @@ export class VolComponent implements OnInit {
   public list() {
     this.volService.list().subscribe(resp => {
       this.vols = resp;
+      console.log(resp);
     }, error => {
       console.log(error);
     });
