@@ -17,9 +17,9 @@
     <td>{{v.heurearrivee}}</td>
     <td>{{v.aeroportdepart}}</td>
     <td>{{v.aeroportarrivee}}</td>
-    <td><a href="" class="btn btn-info">Editer</a><td>
-    <td><a href="" class="btn btn-danger">Supprimer</a></td>
+    <td><a href="" [routerLink]="['/vol', 'edit', v.id]" class="btn btn-info">Editer</a><td>
+    <td><a href="" class="btn btn-danger" (click)="delete(v.id)">Supprimer</a></td>
   </tr>
 </table>
 
-<a href="" class="btn btn-info">Ajouter</a>
+<a href="" class="btn btn-info" [routerLink]="['/vol', 'create']">Ajouter</a>
