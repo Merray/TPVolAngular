@@ -1,3 +1,25 @@
-<p>
-  vol works!
-</p>
+<h1>Liste des Vols</h1>
+<table class="table">
+  <tr>
+    <th>ID du vol</th>
+    <th>Date de départ</th>
+    <th>Date d'arrivée</th>
+    <th>Heure de départ</th>
+    <th>Heure d'arrivée</th>
+    <th>Aeroport de départ</th>
+    <th>Aeroport d'arrivée</th>
+  </tr>
+  <tr *ngFor="let v of vols">
+    <td>{{v.id}}</td>
+    <td>{{v.datedepart}}</td>
+    <td>{{v.datearrivee}}</td>
+    <td>{{v.heuredepart}}</td>
+    <td>{{v.heurearrivee}}</td>
+    <td>{{v.aeroportdepart}}</td>
+    <td>{{v.aeroportarrivee}}</td>
+    <td><a href="" class="btn btn-info">Editer</a><td>
+    <td><a href="" class="btn btn-danger">Supprimer</a></td>
+  </tr>
+</table>
+
+<a href="" class="btn btn-info">Ajouter</a>

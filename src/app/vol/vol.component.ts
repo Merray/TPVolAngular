@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-vol',
@@ -6,8 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./vol.component.css']
 })
 export class VolComponent implements OnInit {
+  vols: vol[];
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
