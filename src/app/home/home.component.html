@@ -1,0 +1,84 @@
+<html>
+  <title>Menu</title>
+<body class="container">
+<header>
+  <div class="jumbotron jumbotron-fluid">
+    <div class="row">
+      <div class="col-sm-5"></div>
+      <h1 class="display-10 col-sm-4">Avions Rapiécés Airline</h1>
+      <div class="col-sm-3"></div>
+    </div>
+  </div>
+</header>
+<!--<div>
+  ${pageContext.request.userPrincipal.name}
+  <div access="hasRole('ROLE_ADMIN')">
+    <c:if test="${pageContext.request.userPrincipal.name !=null }">
+      Logged as: ${pageContext.request.userPrincipal.name}
+      <a href="../logout">Logout</a>
+    </c:if>
+  </div>
+</div>-->
+<div class="row">
+  <div class="card col-sm-6" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Clients</h5>
+      <p class="card-text">Consultez la liste des clients enregistrés
+        dans notre base de données</p>
+      <a href="" [routerLink]="['/client']" routerLinkActive="active" class="btn btn-info">Ici</a>
+    </div>
+  </div>
+  <div class="card col-sm-6" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Passagers</h5>
+      <p class="card-text">Consultez la liste des passagers
+        enregistrés dans notre base de données</p>
+      <a href="" [routerLink]="['/passager']" routerLinkActive="active" class="btn btn-info">Ici</a>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="card col-sm-6" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Vols</h5>
+      <p class="card-text">Consultez la liste des vols enregistrés
+        dans notre base de données</p>
+      <a href="" [routerLink]="['/vol']" routerLinkActive="active" class="btn btn-info">Ici</a>
+    </div>
+  </div>
+  <div class="card col-sm-6" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Reservations</h5>
+      <p class="card-text">Consultez la liste des réservations
+        enregistrées dans notre base de données</p>
+      <a href="" [routerLink]="['/reservation']" routerLinkActive="active" class="btn btn-info">Ici</a>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="card col-sm-6" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Compagnies Aériennes</h5>
+      <p class="card-text">Consultez la liste des compagnies aériennes
+        enregistrées dans nos base de données</p>
+      <a href="" [routerLink]="['/compagnieaerienne']" routerLinkActive="active" class="btn btn-info">Ici</a>
+    </div>
+  </div>
+  <div class="card col-sm-6" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Hébergez vos données chez nous !</h5>
+      <p class="card-text">Hébergez vos données personnelles sur nos
+        serveurs pour seulement 99.99€/mois !</p>
+      <a href="#" class="btn btn-danger">Saisissez votre chance !</a>
+    </div>
+  </div>
+</div>
+
+
+</body>
+<footer>
+  <div class=row>
+    <div class=col-sm-4>© Copyright BestAjcGroupEver 2018</div>
+  </div>
+</footer>
+</html>
