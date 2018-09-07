@@ -2,7 +2,7 @@ import {Time} from '@angular/common';
 
 export class Vol {
   constructor(private _id?: number, private _datedepart?: Date, private _datearrivee?: Date, private _heuredepart?: Time,
-              private _heurearrivee?: Time) {
+              private _heurearrivee?: Time, private _aeroportdepart?: string, private _aeroportarrivee?: string) {
   }
 
   get id(): number {
@@ -43,5 +43,21 @@ export class Vol {
 
   set heurearrivee(value: Time) {
     this._heurearrivee = value;
+  }
+
+  get aeroportdepart(): string {
+    return this._aeroportdepart;
+  }
+
+  set aeroportdepart(value: string) {
+    this._aeroportdepart = value;
+  }
+
+  get aeroportarrivee(): string {
+    return this._aeroportarrivee;
+  }
+
+  set aeroportarrivee(value: string) {
+    this._aeroportarrivee = value;
   }
 }
