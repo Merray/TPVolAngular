@@ -10,6 +10,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -25,6 +26,7 @@ import com.sopra.TPVolAngular.model.Reservation;
 import com.sopra.TPVolAngular.model.view.JsonViews;
 import com.sopra.TPVolAngular.repositories.ReservationRepository;
 
+@CrossOrigin("{*}")
 @RestController
 @RequestMapping("/rest/reservation")
 public class ReservationRestController {
