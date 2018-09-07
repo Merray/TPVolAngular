@@ -5,6 +5,8 @@ import {ReservationComponent} from './reservation/reservation.component';
 import {PassagerComponent} from './passager/passager.component';
 import {ReservationEditComponent} from './reservation/reservation-edit.component';
 import {ClientEditComponent} from './client/client-edit.component';
+import {VolComponent} from './vol/vol.component';
+import {VolEditComponent} from './vol/vol-edit.component';
 
 export const routes: Routes = [
  {path: 'reservation', component: ReservationComponent},
