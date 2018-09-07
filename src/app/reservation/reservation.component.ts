@@ -15,14 +15,14 @@ export class ReservationComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.list();
+   // this.list();
   }
 
-  public list() {
+/*  public list() {
     this.reservationService.list().subscribe(resp => {
       this.reservations = resp;
     }, error => {
       console.log(error);
     });
-  }
+  }*/
 }
