@@ -22,11 +22,11 @@ export class ClientService {
 
 
   public delete(id: number): Observable<any> {
-    return this.http.delete(`${this.url}/rest/article/${id}`);
+    return this.http.delete(`${this.url}/rest/client/${id}`);
   }
 
-  public findById(id: number): Observable<Client> {
-    return this.http.get<Client>(`${this.url}/rest/client/${id}`);
+  public findById(id: number): Observable<ClientEl> {
+    return this.http.get<ClientEl>(`${this.url}/rest/client/${id}`);
   }
 
   public save(client: Client): Observable<any> {

@@ -31,11 +31,11 @@
     <td>{{client.email}}</td>
 
 
-    <td *ngIf="client.type == 'El'"><a href="" [routerLink]="['/client', 'el','edit',client.id_client]"
+    <td *ngIf="client.type == 'El'"><a href="" [routerLink]="['/client', 'edit','el',client.id_client]"
                                        routerLinkActive="active" class="btn btn-info">edition</a></td>
-    <td *ngIf="client.type == 'Moral'"><a href="" [routerLink]="['/client', 'moral','edit',client.id_client]"
+    <td *ngIf="client.type == 'Moral'"><a href="" [routerLink]="['/client', 'edit','moral',client.id_client]"
                                        routerLinkActive="active" class="btn btn-info">edition</a></td>
-    <td *ngIf="client.type == 'Physique'"><a href="" [routerLink]="['/client', 'physique','edit',client.id_client]"
+    <td *ngIf="client.type == 'Physique'"><a href="" [routerLink]="['/client', 'edit','physique',client.id_client]"
                                        routerLinkActive="active" class="btn btn-info">edition</a></td>
     <td></td>
     <td>
@@ -51,5 +51,5 @@
 <a href="" class="btn btn-info" [routerLink]="['/client','create','el']" routerLinkActive="active">Ajouter Client El</a>
 
 <a href="" class="btn btn-info" [routerLink]="['/client','create','moral']" routerLinkActive="active">Ajouter Client Moral</a>
-     
+
 <a href="" class="btn btn-info" [routerLink]="['/client','create','physique']" routerLinkActive="active">Ajouter Client Physique</a>

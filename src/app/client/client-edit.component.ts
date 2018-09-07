@@ -14,6 +14,7 @@ import {ClientPhysique} from '../model/client-physique';
 export class ClientEditComponent implements OnInit {
 
   client: Client;
+  type: string;
 
   constructor(private clientService: ClientService, private ar: ActivatedRoute, private router: Router) {
 
@@ -25,10 +26,13 @@ export class ClientEditComponent implements OnInit {
       console.log(this.client);
       if (params.type === 'El') {
         this.client = new ClientEl();
+        this.type = 'El';
       } else if (params.type === 'Moral') {
         this.client = new ClientMoral();
+        this.type = 'Moral';
       } else if (params.type === 'Physique') {
         this.client = new ClientPhysique();
+        this.type = 'Physique';
       }
       if (params.id) {
         this.clientService.findById(params.id_client).subscribe(resp => {
