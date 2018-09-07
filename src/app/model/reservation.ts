@@ -1,7 +1,7 @@
 export class Reservation {
 
   // private _client?: client, private _vol?: vol, private _passager?: passager
-  constructor(private _id?: number, private _date?: string, private _numero?: number
+  constructor(private _id?: number, private _date?: Date, private _numero?: number
   ) {
 
   }
@@ -13,11 +13,11 @@ export class Reservation {
     this._id = value;
   }
 
-  get date(): string {
+  get date(): Date {
     return this._date;
   }
 
-  set date(value: string) {
+  set date(value: Date) {
     this._date = value;
   }
 
