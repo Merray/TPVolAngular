@@ -26,7 +26,7 @@ import com.sopra.TPVolAngular.model.Reservation;
 import com.sopra.TPVolAngular.model.view.JsonViews;
 import com.sopra.TPVolAngular.repositories.ReservationRepository;
 
-@CrossOrigin("{*}")
+@CrossOrigin(origins= {"*"})
 @RestController
 @RequestMapping("/rest/reservation")
 public class ReservationRestController {
@@ -43,7 +43,7 @@ public class ReservationRestController {
 	}
 
 	@JsonView(JsonViews.ReservationsByClient.class)
-	@GetMapping(value = "/{client}")
+	@GetMapping(value = "/client/{client}")
 	public ResponseEntity<List<Reservation>> findByClient(@PathVariable(name = "client") Long idClient) {
 		ResponseEntity<List<Reservation>> response = null;
 		Optional<List<Reservation>> opt = reservationRepository.findAllCustomWithClient(idClient);
