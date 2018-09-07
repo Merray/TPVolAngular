@@ -1,9 +1,7 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-
 import {routes} from './route';
 import {RouterModule} from '@angular/router';
-
 import {AppComponent} from './app.component';
 import {FormsModule} from '@angular/forms';
 import {PassagerComponent} from './service/passager/passager.component';
@@ -14,7 +12,6 @@ import { ReservationComponent } from './reservation/reservation/reservation.comp
 import { ReservationEditComponent } from './reservation/reservation/reservation-edit.component';
 import { VolComponent } from './vol/vol.component';
 import { VolEditComponent } from './vol/vol-edit.component';
-
 @NgModule({
   declarations: [
     AppComponent,
