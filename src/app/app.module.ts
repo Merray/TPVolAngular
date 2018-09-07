@@ -12,6 +12,8 @@ import {ClientEditComponent} from './client/client-edit.component';
 import {HomeComponent} from './home/home.component';
 import { ReservationComponent } from './reservation/reservation/reservation.component';
 import { ReservationEditComponent } from './reservation/reservation/reservation-edit.component';
+import { VolComponent } from './vol/vol.component';
+import { VolEditComponent } from './vol/vol-edit.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { ReservationEditComponent } from './reservation/reservation/reservation-
     ClientEditComponent,
     HomeComponent,
     PassagerComponent,
-    ReservationComponent
+    ReservationComponent,
+    VolComponent,
+    VolEditComponent
   ],
   imports: [
     BrowserModule, FormsModule, RouterModule.forRoot(routes)
