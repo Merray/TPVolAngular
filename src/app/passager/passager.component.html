@@ -13,10 +13,10 @@
     <td>{{r.nom}}</td>
     <td>{{r.prenom}}</td>
     <td><a href="" class="btn btn-secondary">Détails</a></td>
-    <td><a href="" class="btn btn-info">Editer</a>
+    <td><a href="" class="btn btn-info" [routerLink]="['/passager', 'edit', r.idPassager]">Editer</a>
     </td>
-    <td><a href="" class="btn btn-danger">Supprimer</a></td>
+    <td><button class="btn btn-danger" (click)="delete(r.idPassager)">Supprimer</button></td>
   </tr>
 </table>
 
-<a href="" class="btn btn-info">Ajouter</a>
+<a href="" class="btn btn-info" [routerLink]="['/passager', 'create']">Ajouter</a>

@@ -1,0 +1,31 @@
+<div class="container">
+  <form (ngSubmit)="save()" #form="ngForm">
+    <div class="form-group">
+      <label for="id">id :</label>
+      <input id="id" name="id" class="form-control" [(ngModel)]="passager.idPassager" readonly="true"/>
+
+    </div>
+    <div class="form-group">
+      <label for="nom">nom :</label>
+      <input id="nom" name="nom" class="form-control" required [(ngModel)]="passager.nom" #nom="ngModel"/>
+      <div *ngIf="nom.dirty&&nom.hasError('required')">prenom obligatoire</div>
+    </div>
+    <div class="form-group">
+      <label for="prenom">prenom :</label>
+      <input class="form-control" id="prenom" name="prenom" required [(ngModel)]="passager.prenom"/>
+    </div>
+    <div class="form-group">
+      <label for="adresse">adresse :</label>
+      <input type="number" class="form-control" id="adresse" name="adresse" [(ngModel)]="passager.adresse.numero"/>
+      <input type="text" class="form-control" [(ngModel)]="passager.adresse.rue"/>
+      <input type="text" class="form-control" [(ngModel)]="passager.adresse.ville"/>
+      <input type="number" class="form-control" [(ngModel)]="passager.adresse.codePostal"/>
+    </div>
+    <div class="form-group">
+      <label for="reservations">reservations :</label>
+      <input class="form-control" id="reservations" name="reservations" [(ngModel)]="passager.reservations"/>
+    </div>
+    <button type="submit" [disabled]="form.invalid" class="btn btn-success">save</button>
+  </form>
+</div>
+
