@@ -43,7 +43,7 @@ public class ReservationRestController {
 	}
 
 	@JsonView(JsonViews.ReservationsByClient.class)
-	@GetMapping(value = "/{client}")
+	@GetMapping(value = "/client/{client}")
 	public ResponseEntity<List<Reservation>> findByClient(@PathVariable(name = "client") Long idClient) {
 		ResponseEntity<List<Reservation>> response = null;
 		Optional<List<Reservation>> opt = reservationRepository.findAllCustomWithClient(idClient);

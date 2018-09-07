@@ -12,7 +12,7 @@ export class ReservationService {
   headers: HttpHeaders;
 
   constructor(private http: HttpClient) {
-    this.headers = new HttpHeaders({'Content-Type': 'application/json', 'Authorization': 'Basic ' + btoa('florent:florent')});
+    // this.headers = new HttpHeaders({'Content-Type': 'application/json', 'Authorization': 'Basic ' + btoa('florent:florent')});
   }
 
   public list(): Observable<Reservation[]> {
@@ -24,7 +24,7 @@ export class ReservationService {
   }
 
   public findById(id: number): Observable<Reservation> {
-    return this.http.get<Reservation>(`${this.url}/rest/reservation${id}`);
+    return this.http.get<Reservation>(`${this.url}/rest/reservation/${id}`);
   }
 
   public save(reservation: Reservation): Observable<any> {
