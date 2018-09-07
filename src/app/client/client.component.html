@@ -1,0 +1,31 @@
+<h1>liste des client</h1>
+<table class=" table">
+  <tr>
+    <th>Id</th>
+    <th>Nom</th>
+    <th>Numéro de téléphone</th>
+    <th>numéro de Fax</th>
+    <th>Email</th>
+    <th></th>
+    <th></th>
+    <th></th>
+
+
+
+  </tr>
+  <tr *ngFor="let client of clients">
+    <td>{{client.id_client}}</td>
+    <td>{{client.nom}}</td>
+    <td>{{client.numeroTel}}</td>
+    <td>{{client.numeroFax}}</td>
+    <td>{{client.email}}</td>
+    <td><a href="" class="btn btn-info" [routerLink]="['/client','edit',client.id_client]" routerLinkActive="active">edition</a></td>
+    <td></td>
+    <td><button class="btn btn-danger" >supprimer</button></td>
+
+
+
+  </tr>
+
+
+</table>

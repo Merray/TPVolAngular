@@ -34,11 +34,13 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 		http.authorizeRequests().antMatchers("/passager/").permitAll();
 		
 		
-		http.authorizeRequests().antMatchers("/rest/**").authenticated().and().httpBasic();
+		// http.authorizeRequests().antMatchers("/rest/**").authenticated().and().httpBasic();
 
 		http.csrf().disable();
 		http.headers().frameOptions().disable();
 		System.out.println(getPasswordEncoder().encode("thibault"));
+		
+		http.authorizeRequests().antMatchers("/rest/**").permitAll();
 
 	}
 
