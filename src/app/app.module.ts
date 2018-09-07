@@ -1,13 +1,17 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {AppComponent} from './app.component';
+import {HomeComponent} from './home/home.component';
+import {PassagerComponent} from './service/passager/passager.component';
+import {ReservationComponent} from './reservation/reservation/reservation.component';
 
-import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    PassagerComponent,
+    ReservationComponent
   ],
   imports: [
     BrowserModule
@@ -15,4 +19,5 @@ import { HomeComponent } from './home/home.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
