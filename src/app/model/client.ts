@@ -38,7 +38,8 @@ export class Client {
     this._email = value;
   }
 
-  constructor(private _id_client?: number, private _nom?: string, private _numeroTel?: number, private _numeroFax?: number, private _email?: string) {
+  constructor(private _id_client?: number, private _nom?: string, private _numeroTel?: number, private _numeroFax?: number,
+              private _email?: string) {
 
 
   }

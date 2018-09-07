@@ -19,6 +19,11 @@
     <td>{{client.numeroTel}}</td>
     <td>{{client.numeroFax}}</td>
     <td>{{client.email}}</td>
+<!--    <td scope="rol" *ngIf="client.type == 'El'">{{client.prenom}}</td>
+    <td scope="rol" *ngIf="client.type == 'Moral'">{{client.siret}}</td>
+    <td scope="rol" *ngIf="client.type == 'Physique'">{{client.prenom}}</td>-->
+
+
     <td><a href="" class="btn btn-info" [routerLink]="['/client','edit',client.id_client]" routerLinkActive="active">edition</a></td>
     <td></td>
     <td><button class="btn btn-danger" >supprimer</button></td>

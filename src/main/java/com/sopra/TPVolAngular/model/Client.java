@@ -19,12 +19,18 @@ import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonSubTypes;
+import com.fasterxml.jackson.annotation.JsonSubTypes.Type;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
+import com.fasterxml.jackson.annotation.JsonTypeInfo.As;
 import com.fasterxml.jackson.annotation.JsonView;
 import com.sopra.TPVolAngular.model.view.JsonViews;
 
 @Entity
 @Table(name="client")
 @DiscriminatorColumn(discriminatorType = DiscriminatorType.STRING, length = 10, name = "type")
+@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = As.PROPERTY, property = "type")
+@JsonSubTypes({ @Type(value = ClientEl.class, name = "El"), @Type(value = ClientMoral.class, name = "Moral"), @Type(value = ClientPhysique.class, name = "Physique") })
 public abstract class Client {
 
 	@Id
