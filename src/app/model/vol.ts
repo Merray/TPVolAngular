@@ -1,9 +1,10 @@
 import {Time} from '@angular/common';
 
 export class Vol {
-  constructor(private _id?: number, private _datedepart?: Date, private _datearrivee?: Date, private _heuredepart?: Time,
-              private _heurearrivee?: Time, private _aeroportdepart?: string, private _aeroportarrivee?: string) {
+  constructor(private _id?: number, private _dateDepart?: Date, private _dateArrivee?: Date, private _heureDepart?: Time,
+              private _heureArrivee?: Time, private _aeroportDepart?: string, private _aeroportArrivee?: string) {
   }
+
 
   get id(): number {
     return this._id;
@@ -13,51 +14,51 @@ export class Vol {
     this._id = value;
   }
 
-  get datedepart(): Date {
-    return this._datedepart;
+  get dateDepart(): Date {
+    return this._dateDepart;
   }
 
-  set datedepart(value: Date) {
-    this._datedepart = value;
+  set dateDepart(value: Date) {
+    this._dateDepart = value;
   }
 
-  get datearrivee(): Date {
-    return this._datearrivee;
+  get dateArrivee(): Date {
+    return this._dateArrivee;
   }
 
-  set datearrivee(value: Date) {
-    this._datearrivee = value;
+  set dateArrivee(value: Date) {
+    this._dateArrivee = value;
   }
 
-  get heuredepart(): Time {
-    return this._heuredepart;
+  get heureDepart(): Time {
+    return this._heureDepart;
   }
 
-  set heuredepart(value: Time) {
-    this._heuredepart = value;
+  set heureDepart(value: Time) {
+    this._heureDepart = value;
   }
 
-  get heurearrivee(): Time {
-    return this._heurearrivee;
+  get heureArrivee(): Time {
+    return this._heureArrivee;
   }
 
-  set heurearrivee(value: Time) {
-    this._heurearrivee = value;
+  set heureArrivee(value: Time) {
+    this._heureArrivee = value;
   }
 
-  get aeroportdepart(): string {
-    return this._aeroportdepart;
+  get aeroportDepart(): string {
+    return this._aeroportDepart;
   }
 
-  set aeroportdepart(value: string) {
-    this._aeroportdepart = value;
+  set aeroportDepart(value: string) {
+    this._aeroportDepart = value;
   }
 
-  get aeroportarrivee(): string {
-    return this._aeroportarrivee;
+  get aeroportArrivee(): string {
+    return this._aeroportArrivee;
   }
 
-  set aeroportarrivee(value: string) {
-    this._aeroportarrivee = value;
+  set aeroportArrivee(value: string) {
+    this._aeroportArrivee = value;
   }
 }

@@ -2,33 +2,33 @@
   <form (ngSubmit)="save()" #form="ngForm">
     <div class="form-group">
       <label for="id">id :</label>
-      <input id="id" name="id" class="form-control" [(ngModel)]="vol.id" readonly="true"/>
+      <input id="id" name="id" class="form-control" [(ngModel)]="vol.id" readonly/>
     </div>
     <div class="form-group">
       <label for="datedepart">date de départ :</label>
-      <input id="datedepart" name="datedepart" class="form-control" required  type="date" [(ngModel)]="vol.datedepart" #nom="ngModel"/>
+      <input id="datedepart" name="datedepart" class="form-control" required  type="date" [(ngModel)]="vol.dateDepart" #nom="ngModel"/>
       <!--<div *ngIf="datedepart.dirty&&datedepart.hasError('required')">Date de départ obligatoire</div>-->
     </div>
     <div class="form-group">
       <label for="datearrivee">date d'arrivée :</label>
-      <input class="form-control" id="datearrivee" name="datearrivee" type="date" required [(ngModel)]="vol.datearrivee"/>
+      <input class="form-control" id="datearrivee" name="datearrivee" type="date" required [(ngModel)]="vol.dateArrivee"/>
     </div>
     <div class="form-group">
       <label for="heuredepart">Heure de départ :</label>
-      <input class="form-control" id="heuredepart" name="heuredepart" required type="time" [(ngModel)]="vol.heuredepart"/>
+      <input class="form-control" id="heuredepart" name="heuredepart" required type="time" [(ngModel)]="vol.heureDepart"/>
     </div>
     <div class="form-group">
       <label for="heurearrivee">Heure d'arrivée :</label>
-      <input class="form-control" id="heurearrivee" name="heurearrivee" required type="time" [(ngModel)]="vol.heurearrivee"/>
+      <input class="form-control" id="heurearrivee" name="heurearrivee" required type="time" [(ngModel)]="vol.heureArrivee"/>
     </div>
 
     <div class="form-group">
       <label for="aeroportdepart">Aeroport de départ :</label>
-      <input class="form-control" id="aeroportdepart" name="aeroportdepart" required [(ngModel)]="vol.aeroportdepart"/>
+      <input class="form-control" id="aeroportdepart" name="aeroportdepart" required [(ngModel)]="vol.aeroportDepart"/>
     </div>
     <div class="form-group">
       <label for="aeroportarrivee">Aeroport d'arrivée :</label>
-      <input class="form-control" id="aeroportarrivee" name="aeroportarrivee" required [(ngModel)]="vol.aeroportarrivee"/>
+      <input class="form-control" id="aeroportarrivee" name="aeroportarrivee" required [(ngModel)]="vol.aeroportArrivee"/>
     </div>
     <button type="submit" class="btn btn-success">save</button>
   </form>
