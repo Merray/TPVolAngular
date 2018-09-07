@@ -1,0 +1,19 @@
+<li><a href="" [routerLink]="['/home']" routerLinkActive="active">Retour au menu</a></li>
+<h1>liste des client</h1>
+<table class=" table">
+  <tr *ngFor="let client of clients">
+    <td>{{client.id_client}}</td>
+    <td>{{client.nom}}</td>
+    <td>{{client.numeroTel}}</td>
+    <td>{{client.numeroFax}}</td>
+    <td>{{client.email}}</td>
+    <td><a href="" class="btn btn-info" [routerLink]="['/client','edit',client.id_client]" routerLinkActive="active">edition</a></td>
+    <td></td>
+    <td><button class="btn btn-danger" >supprimer</button></td>
+
+
+
+  </tr>
+
+
+</table>
