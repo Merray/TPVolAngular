@@ -1,3 +1,22 @@
-<p>
-  passager works!
-</p>
+<h1>Liste des passagers</h1>
+<table class="table">
+  <tr>
+    <th>ID</th>
+    <th>Nom</th>
+    <th>Prenom</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr *ngFor="let r of passagers">
+    <td>{{r.idPassager}}</td>
+    <td>{{r.nom}}</td>
+    <td>{{r.prenom}}</td>
+    <td><a href="" class="btn btn-secondary">Détails</a></td>
+    <td><a href="" class="btn btn-info">Editer</a>
+    </td>
+    <td><a href="" class="btn btn-danger">Supprimer</a></td>
+  </tr>
+</table>
+
+<a href="" class="btn btn-info">Ajouter</a>
