@@ -12,7 +12,6 @@ import { VolComponent } from './vol/vol.component';
 import { VolEditComponent } from './vol/vol-edit.component';
 import {ReservationComponent} from './reservation/reservation.component';
 import {ReservationEditComponent} from './reservation/reservation-edit.component';
-import {ReservationService} from './service/reservation/reservation.service';
 import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
