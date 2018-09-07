@@ -10,8 +10,8 @@ import {PassagerComponent} from './service/passager/passager.component';
 import {ClientComponent} from './client/client.component';
 import {ClientEditComponent} from './client/client-edit.component';
 import {HomeComponent} from './home/home.component';
-import { ReservationComponent } from './reservation/reservation/reservation.component';
-import { ReservationEditComponent } from './reservation/reservation/reservation-edit.component';
+import { ReservationComponent } from './reservation/reservation.component';
+import { ReservationEditComponent } from './reservation/reservation-edit.component';
 
 @NgModule({
   declarations: [
