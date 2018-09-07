@@ -2,7 +2,8 @@ import {deprecate} from 'util';
 
 export class Reservation {
 
-  constructor(private _id?: number, private _date?: string, private _numero?: number //, private _client?: client, private _vol?: vol, private _passager?: passager
+  // private _client?: client, private _vol?: vol, private _passager?: passager
+  constructor(private _id?: number, private _date?: string, private _numero?: number
   ) {
 
 
@@ -32,27 +33,27 @@ export class Reservation {
     this._numero = value;
   }
 
- /* get client(): client {
-    return this._client;
-  }
+  /* get client(): client {
+     return this._client;
+   }
 
-  set client(value: client) {
-    this._client = value;
-  }
+   set client(value: client) {
+     this._client = value;
+   }
 
-  get vol(): vol {
-    return this._vol;
-  }
+   get vol(): vol {
+     return this._vol;
+   }
 
-  set vol(value: vol) {
-    this._vol = value;
-  }
+   set vol(value: vol) {
+     this._vol = value;
+   }
 
-  get passager(): passager {
-    return this._passager;
-  }
+   get passager(): passager {
+     return this._passager;
+   }
 
-  set passager(value: passager) {
-    this._passager = value;
-  }*/
+   set passager(value: passager) {
+     this._passager = value;
+   }*/
 }
