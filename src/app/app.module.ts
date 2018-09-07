@@ -23,7 +23,6 @@ import {HttpClientModule} from '@angular/common/http';
     ClientEditComponent,
     HomeComponent,
     PassagerComponent,
-    ReservationComponent,
     VolComponent,
     VolEditComponent
   ],

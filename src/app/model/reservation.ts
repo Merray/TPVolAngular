@@ -4,9 +4,7 @@ export class Reservation {
   constructor(private _id?: number, private _date?: string, private _numero?: number
   ) {
 
-
   }
-
   get id(): number {
     return this._id;
   }
