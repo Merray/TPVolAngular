@@ -23,4 +23,10 @@ export class PassagerComponent implements OnInit {
       this.passagers = resp;
     });
   }
+
+  public delete(id: number) {
+    this.passagerService.delete(id).subscribe(resp => {
+      this.list();
+    });
+  }
 }
