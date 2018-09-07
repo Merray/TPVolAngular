@@ -17,6 +17,9 @@ import javax.validation.constraints.NotEmpty;
 
 import org.hibernate.validator.constraints.Length;
 
+import com.fasterxml.jackson.annotation.JsonView;
+import com.sopra.TPVolAngular.model.view.JsonViews;
+
 @Entity
 @Table(name = "passager")
 @Embeddable
@@ -26,17 +29,21 @@ public class Passager {
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seqPassager")
 	@SequenceGenerator(name = "seqPassager", sequenceName = "seq_passager", initialValue = 100, allocationSize = 1)
 	@Column(name = "id_passager")
+	@JsonView(JsonViews.Common.class)
 	private Long idPassager;
 	@Version
 	private int version;
 	@Column(name = "nom_passager", length = 50, nullable = false)
 	@NotEmpty
 	@Length(min = 3, max = 50)
+	@JsonView(JsonViews.Common.class)
 	private String nom;
 	@Column(name = "prenom_passager", length = 50)
 	@NotEmpty
 	@Length(min = 3, max = 50)
+	@JsonView(JsonViews.Common.class)
 	private String prenom;
+	@JsonView(JsonViews.ClientByIdWithReservations.class)
 	@OneToMany(mappedBy = "passager")
 	private Set<Reservation> reservations;
 
