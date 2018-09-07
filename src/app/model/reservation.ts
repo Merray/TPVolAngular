@@ -1,5 +1,3 @@
-import {deprecate} from 'util';
-
 export class Reservation {
 
   // private _client?: client, private _vol?: vol, private _passager?: passager
