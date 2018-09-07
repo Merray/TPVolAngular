@@ -12,6 +12,7 @@ import { VolComponent } from './vol/vol.component';
 import { VolEditComponent } from './vol/vol-edit.component';
 import {ReservationComponent} from './reservation/reservation.component';
 import {ReservationEditComponent} from './reservation/reservation-edit.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,12 +23,11 @@ import {ReservationEditComponent} from './reservation/reservation-edit.component
     ClientEditComponent,
     HomeComponent,
     PassagerComponent,
-    ReservationComponent,
     VolComponent,
     VolEditComponent
   ],
   imports: [
-    BrowserModule, FormsModule, RouterModule.forRoot(routes)
+    BrowserModule, FormsModule, RouterModule.forRoot(routes), HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
