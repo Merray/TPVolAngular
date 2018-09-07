@@ -2,7 +2,7 @@ import {Reservation} from './reservation';
 import {Adresse} from './adresse';
 
 export class Passager {
-  constructor(private _idPassager?: number, private _nom?: string, private _prenom?: string, private _adresse?: Adresse, private _reservations?: Reservation[]) {
+  constructor(private _idPassager?: number, private _nom?: string, private _prenom?: string, private _reservations?: Reservation[]) {
 
   }
 
@@ -36,13 +36,5 @@ export class Passager {
 
   set reservations(value: Reservation[]) {
     this._reservations = value;
-  }
-
-  get adresse(): Adresse {
-    return this._adresse;
-  }
-
-  set adresse(value: Adresse) {
-    this._adresse = value;
   }
 }
