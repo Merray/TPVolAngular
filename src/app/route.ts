@@ -18,9 +18,14 @@ export const routes: Routes = [
   {path: 'passager/create', component: PassagerEditComponent},
   {path: 'passager/edit/:id', component: PassagerEditComponent},
   {path: 'client', component: ClientComponent},
-  {path: 'client/create', component: ClientEditComponent},
-  {path: 'client/edit/:id', component: ClientEditComponent},
+  {path: 'client/create/el', component: ClientEditComponent},
+  {path: 'client/create/moral', component: ClientEditComponent},
+  {path: 'client/create/physique', component: ClientEditComponent},
+  {path: 'client/edit/el/:id', component: ClientEditComponent},
+  {path: 'client/edit/moral/:id', component: ClientEditComponent},
+  {path: 'client/edit/physique/:id', component: ClientEditComponent},
   {path: 'vol', component: VolComponent},
   {path: 'vol/create', component: VolEditComponent},
-  {path: 'vol/edit/:id', component: VolEditComponent},
+  {path: 'vol/edit/:id', component: VolEditComponent}
+
 ];

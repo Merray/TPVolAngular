@@ -2,7 +2,10 @@
 <table class=" table">
   <tr>
     <th>Id</th>
+    <th>Type de client</th>
+    <th>Prenom</th>
     <th>Nom</th>
+    <th>Siret</th>
     <th>Numéro de téléphone</th>
     <th>numéro de Fax</th>
     <th>Email</th>
@@ -11,26 +14,42 @@
     <th></th>
 
 
-
   </tr>
   <tr *ngFor="let client of clients">
     <td>{{client.id_client}}</td>
+    <td>{{client.type}}</td>
+    <td scope="rol" *ngIf="client.type == 'El'">{{client.prenom}}</td>
+    <td scope="rol" *ngIf="client.type == 'Physique'">{{client.prenom}}</td>
+    <td scope="rol" *ngIf="client.type == 'Moral'"></td>
     <td>{{client.nom}}</td>
+    <td scope="rol" *ngIf="client.type == 'El'"></td>
+    <td scope="rol" *ngIf="client.type == 'Physique'"></td>
+    <td scope="rol" *ngIf="client.type == 'Moral'">{{client.siret}}</td>
+
     <td>{{client.numeroTel}}</td>
     <td>{{client.numeroFax}}</td>
     <td>{{client.email}}</td>
-<!--    <td scope="rol" *ngIf="client.type == 'El'">{{client.prenom}}</td>
-    <td scope="rol" *ngIf="client.type == 'Moral'">{{client.siret}}</td>
-    <td scope="rol" *ngIf="client.type == 'Physique'">{{client.prenom}}</td>-->
 
 
-    <td><a href="" class="btn btn-info" [routerLink]="['/client','edit',client.id_client]" routerLinkActive="active">edition</a></td>
+    <td *ngIf="client.type == 'El'"><a href="" [routerLink]="['/client', 'edit','el',client.id_client]"
+                                       routerLinkActive="active" class="btn btn-info">edition</a></td>
+    <td *ngIf="client.type == 'Moral'"><a href="" [routerLink]="['/client', 'edit','moral',client.id_client]"
+                                       routerLinkActive="active" class="btn btn-info">edition</a></td>
+    <td *ngIf="client.type == 'Physique'"><a href="" [routerLink]="['/client', 'edit','physique',client.id_client]"
+                                       routerLinkActive="active" class="btn btn-info">edition</a></td>
     <td></td>
-    <td><button class="btn btn-danger" >supprimer</button></td>
-
+    <td>
+      <button class="btn btn-danger" (click)="delete(client.id_client)">supprimer</button>
+    </td>
 
 
   </tr>
 
 
 </table>
+
+<a href="" class="btn btn-info" [routerLink]="['/client','create','el']" routerLinkActive="active">Ajouter Client El</a>
+
+<a href="" class="btn btn-info" [routerLink]="['/client','create','moral']" routerLinkActive="active">Ajouter Client Moral</a>
+
+<a href="" class="btn btn-info" [routerLink]="['/client','create','physique']" routerLinkActive="active">Ajouter Client Physique</a>
