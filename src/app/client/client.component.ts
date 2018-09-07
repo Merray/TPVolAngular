@@ -24,5 +24,12 @@ export class ClientComponent implements OnInit {
     }, error => console.log(error));
   }
 
+  public delete(id: number) {
+    return this.clientService.delete(id).subscribe(resp => {
+      this.list();
+    });
+  }
+
+
 
 }

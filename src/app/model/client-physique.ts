@@ -8,7 +8,7 @@ export class ClientPhysique extends Client {
   set prenom(value: string) {
     this._prenom = value;
   }
-  constructor(private _prenom: string) {
+  constructor(private _prenom?: string) {
     super();
   }
 }

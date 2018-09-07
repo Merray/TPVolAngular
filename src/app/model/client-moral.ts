@@ -8,7 +8,7 @@ export class ClientMoral extends Client {
   set siret(value: string) {
     this._siret = value;
   }
-  constructor(private _siret: string) {
+  constructor(private _siret?: string) {
     super();
   }
 }
